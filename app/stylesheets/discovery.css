@@ -11,11 +11,11 @@ Author: Valérian Saliou
 */
 
 #discovery .content {
-    padding: 10px 0 10px 0;
+    /*padding: 10px 0 10px 0;*/
 }
 
 #discovery .content p {
-    margin: 5px 10px 5px 10px;
+    /*margin: 5px 10px 5px 10px;*/
     text-align: justify;
     font-size: 0.85em;
 }
@@ -26,8 +26,8 @@ Author: Valérian Saliou
 #privacy .privacy-head {
     width: 606px;
     height: 24px;
-    margin: 0 10px 10px 10px;
-    padding: 6px;
+    /*margin: 0 10px 10px 10px;*/
+    /*padding: 6px;*/
     background: #f1f6fd;
     border: 1px #9dc4fc solid;
 }
@@ -36,7 +36,7 @@ Author: Valérian Saliou
 #directory .directory-server-text {
     float: left;
     font-size: 0.9em;
-    margin: 3px;
+    /*margin: 3px;*/
 }
 
 html[dir="rtl"] #discovery .disco-server-text,
@@ -50,7 +50,7 @@ html[dir="rtl"] #directory .directory-server-text {
     height: 18px;
     float: right;
     margin-right: 10px;
-    padding: 2px;
+    /*padding: 2px;*/
 }
 
 html[dir="rtl"] #discovery .disco-server-input,
@@ -62,7 +62,8 @@ html[dir="rtl"] #directory .directory-server-input {
 
 #discovery .disco-category {
     display: none;
-    margin-bottom: 22px;
+    margin-left: 20px;/*margin-bottom: 22px;*/
+	float:left;
 }
 
 #discovery .disco-category-title {
@@ -75,4 +76,10 @@ html[dir="rtl"] #directory .directory-server-input {
 
 html[dir="rtl"] #discovery .one-actions .one-button {
     float: left;
+}
+
+/*hide .top and .bottom*/
+#discovery .content .discovery-head, #discovery .disco-category-title {
+	position: absolute;
+	left: -9999px;
 }

@@ -22,6 +22,8 @@ Author: Valérian Saliou
     -moz-box-shadow: 0 0 6px #5c5c5c;
     -webkit-box-shadow: 0 0 6px #5c5c5c;
     box-shadow: 0 0 6px #5c5c5c;
+	/*NEW*/
+	display: none;
 }
 
 #my-infos .content {

@@ -11,24 +11,32 @@ Author: Valérian Saliou
 */
 
 #roster {
-        background-color: rgb(20,20,20);
-        background-color: rgba(20,20,20,0.85);
-        color: #919191;
+        background-color: #EDEDED;/*rgb(20,20,20);
+        background-color: rgba(20,20,20,0.85);*/
+        /*color: #919191;
         padding: 15px 6px 4px 6px;
         -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
         border-radius: 4px;
         -moz-box-shadow: 0 0 6px #5c5c5c;
         -webkit-box-shadow: 0 0 6px #5c5c5c;
-        box-shadow: 0 0 6px #5c5c5c;
+        box-shadow: 0 0 6px #5c5c5c;*/
+		background: #f9f9f9;
+		width: 293px;
+		position: relative;
+		table-layout: fixed;
+		min-height: 500px;
+		/*NEW*/
+		position: relative;
+		bottom: 0;
 }
 
 #roster .content {
-        background: #e8f1f3;
+        background: #EDEDED;/*#e8f1f3;
         background: -moz-linear-gradient(top, #e8f1f3, #e4edef);
         background: -webkit-gradient(linear, left top, left bottom, from(#e8f1f3), to(#e4edef));
         background: -webkit-linear-gradient(top, #e8f1f3 0%, #e4edef 100%);
-        background: -o-linear-gradient(top, #e8f1f3 0%, #e4edef 100%);
+        background: -o-linear-gradient(top, #e8f1f3 0%, #e4edef 100%);*/
         color: #666666;
         height: 207px;
         padding: 4px 4px 0 4px;
@@ -91,23 +99,27 @@ html[dir="rtl"] #roster .one-group a.group {
 }
 
 #roster .buddy-click {
-        background: #d9e7ea;
-        width: 100%;
+        background: #B3B3B3;/*#d9e7ea;*/
+        /*width: 100%;
         height: 100%;
         overflow: hidden;
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
-        border-radius: 3px;
+        border-radius: 3px;*/
+		/*HERE NEW STYLE*/
+		transition: all .3s ease;
+		display: block;
+		padding: 9px 0;
 }
 
 #roster .buddy-click:hover,
 #roster .buddy-click:focus {
-        background: #cedee1;
+        background: #EDEDED/*#cedee1*/;
         cursor: pointer;
 }
 
 #roster .buddy-click:active {
-        background: #c3d3d7;
+        background: #EDEDED/*#c3d3d7*/;
 }
 
 #roster .gateway {

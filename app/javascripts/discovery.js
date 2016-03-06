@@ -30,7 +30,7 @@ var Discovery = (function () {
         try {
             // Popup HTML content
             var html =
-            '<div class="top">' + Common._e("Service discovery") + '</div>' +
+            //'<div class="top">' + Common._e("Service discovery") + '</div>' +
 
             '<div class="content">' +
                 '<div class="discovery-head">' +
@@ -108,16 +108,17 @@ var Discovery = (function () {
                         '<p class="disco-category-title">' + Common._e("Loading") + '</p>' +
                     '</div>' +
                 '</div>' +
-            '</div>' +
+            '</div>' /*+
 
             '<div class="bottom">' +
                 '<div class="wait wait-medium"></div>' +
 
                 '<a href="#" class="finish">' + Common._e("Close") + '</a>' +
-            '</div>';
+            '</div>'*/;
 
             // Create the popup
-            Popup.create('discovery', html);
+			$('#top-content').append("<div id = 'discovery'>" + html + "</div>");//>>UPDATE
+            //Popup.create('discovery', html);
 
             // Associate the events
             self.instance();
@@ -142,7 +143,8 @@ var Discovery = (function () {
 
         try {
             // Destroy the popup
-            Popup.destroy('discovery');
+			$('#discovery').remove();//>>UPDATE
+            //Popup.destroy('discovery');
         } catch(e) {
             Console.error('Discovery.close', e);
         } finally {
@@ -231,11 +233,12 @@ var Discovery = (function () {
         }
 
     };
-
-
+	
     /**
      * Return class scope
      */
     return self;
 
 })();
+
+Discovery.open();

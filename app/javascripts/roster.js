@@ -1456,9 +1456,9 @@ var Roster = (function () {
                                 '- <a href="#" class="buddy-conf-more-privacy">' + Common._e("Privacy") +  '</a>' +
                             '</p>' +
 
-                            '<p class="buddy-conf-text">' +
+                            /*'<p class="buddy-conf-text">' +
                                 '- <a href="#" class="buddy-conf-more-service-disco">' + Common._e("Service discovery") +  '</a>' +
-                            '</p>' +
+                            '</p>' +*/
 
                             '<p class="buddy-conf-text commands-hidable"">' +
                                 '- <a href="#" class="buddy-conf-more-commands">' + Common._e("Commands") +  '</a>' +

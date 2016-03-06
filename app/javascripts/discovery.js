@@ -40,7 +40,7 @@ var Discovery = (function () {
                 '</div>' +
 
                 '<div class="results discovery-results">' +
-                    '<div class="disco-category disco-account">' +
+                    /*'<div class="disco-category disco-account">' +
                         '<p class="disco-category-title">' + Common._e("Accounts") + '</p>' +
                     '</div>' +
 
@@ -70,13 +70,13 @@ var Discovery = (function () {
 
                     '<div class="disco-category disco-directory">' +
                         '<p class="disco-category-title">' + Common._e("Directories") + '</p>' +
-                    '</div>' +
+                    '</div>' +*/
 
                     '<div class="disco-category disco-gateway">' +
                         '<p class="disco-category-title">' + Common._e("Gateways") + '</p>' +
                     '</div>' +
 
-                    '<div class="disco-category disco-headline">' +
+                    /*'<div class="disco-category disco-headline">' +
                         '<p class="disco-category-title">' + Common._e("News") + '</p>' +
                     '</div>' +
 
@@ -102,7 +102,7 @@ var Discovery = (function () {
 
                     '<div class="disco-category disco-others">' +
                         '<p class="disco-category-title">' + Common._e("Others") + '</p>' +
-                    '</div>' +
+                    '</div>' +*/
 
                     '<div class="disco-category disco-wait">' +
                         '<p class="disco-category-title">' + Common._e("Loading") + '</p>' +
@@ -117,9 +117,33 @@ var Discovery = (function () {
             '</div>'*/;
 
             // Create the popup
-			$('#top-content').append("<div id = 'discovery'>" + html + "</div>");//>>UPDATE
             //Popup.create('discovery', html);
 
+			//-----------NEW START-----------
+			var fn1 = './server/get.php?h=0b1545052ca60753f7976c853e349cee&t=images&f=discovery/';
+			//edit only this (if you want to add new discovery)
+			var socials = [
+				"vk.xmpp.mysender.ru",
+				"fb.xmpp.mysender.ru",
+				"msn.xmpp.mysender.ru",
+				"twitter.xmpp.mysender.ru",
+				"skype.xmpp.mysender.ru",
+				"yahoo.xmpp.mysender.ru",
+				"whatsapp.xmpp.mysender.ru",
+				"telegram.xmpp.mysender.ru",
+				"mrim.xmpp.mysender.ru"
+			];
+			//create div's and insert it into socials
+			var html2 = "";
+			for(var i in socials)
+				html2 += "<div class = 'social'>" +
+					"<img src = '" + fn1 + socials[i] + ".png' onclick = 'Discovery.show_block(\"" + socials[i] + "\");'>" +
+				"</div>";
+			
+			$('#top-content').append("<div id = 'discovery'>" + html + "</div>");
+			$('#top-content').append("<div id = 'socials'>" + html2 + "</div>");
+			//-----------NEW END-----------
+			
             // Associate the events
             self.instance();
 
@@ -133,6 +157,13 @@ var Discovery = (function () {
 
     };
 
+	//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MY FUNC
+	self.show_block = function(str)
+	{
+		DataForm.go(str, "subscribe", "", "", "discovery");
+		$(".discovery-results").css("display", "block");
+		return false;
+	};
 
     /**
      * Quits the discovery popup
@@ -171,6 +202,12 @@ var Discovery = (function () {
             DataForm.go(discoServer, 'browse', '', '', 'discovery');
 
             Console.log('Service discovery launched: ' + discoServer);
+			
+			//click event MINE
+			$('.disco-gateway .oneresult').click(function(){
+				var str = $(this).find('.one-host').text();
+				DataForm.go(str, 'subscribe', '', '', 'discovery');
+			});
         } catch(e) {
             Console.error('Discovery.start', e);
         } finally {
@@ -196,6 +233,9 @@ var Discovery = (function () {
 
             // We hide the wait icon, the no result alert and the results
             $('#discovery .wait, #discovery .disco-category').hide();
+			
+			//MYCODE
+			$(".discovery-results").css("display", "none");
         } catch(e) {
             Console.error('Discovery.clean', e);
         }
@@ -213,7 +253,7 @@ var Discovery = (function () {
         try {
             // Click event
             $('#discovery .bottom .finish').click(self.close);
-
+			
             // Keyboard event
             $('#discovery .disco-server-input').keyup(function(e) {
                 if(e.keyCode == 13) {
@@ -240,5 +280,3 @@ var Discovery = (function () {
     return self;
 
 })();
-
-Discovery.open();

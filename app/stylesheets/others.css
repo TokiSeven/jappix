@@ -23,7 +23,7 @@ Author: Valérian Saliou
     z-index: 50;
 	/*NEW*/
 	background: #f2f2f2;
-	height: 100px;
+	height: 83px;
 	padding-top: 16px;
 	border-bottom: 1px solid #E2E2E2;
 }
@@ -36,6 +36,7 @@ Author: Valérian Saliou
     bottom: /*5px*/0px;
     min-width: 850px;
     min-height: 450px;
+	background-color: #f9f9f9;
 }
 
 #left-content {
@@ -43,12 +44,12 @@ Author: Valérian Saliou
     top: 0;
     left: 0;
     bottom: 0;
-    width: /*248px*/293px;
+    width: /*248px*/292px;
 	/*NEW*/
 	background: #f9f9f9;
-	position: relative;
 	table-layout: fixed;
 	min-height: 500px;
+	border-right: 1px solid #E2E2E2;
 }
 
 html[dir="rtl"] #left-content {

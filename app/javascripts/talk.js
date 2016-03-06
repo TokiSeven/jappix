@@ -35,6 +35,10 @@ var Talk = (function () {
             PEP.instance();
             Notification.instance();
             Music.instance();
+			/*NEW START*/
+			Discovery.open();
+			$('.tools-logo').remove();
+			/*NEW END*/
         } catch(e) {
             Console.error('Talk.events', e);
         }

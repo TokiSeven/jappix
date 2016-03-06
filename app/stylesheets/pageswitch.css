@@ -12,7 +12,7 @@ Author: Valérian Saliou
 
 #page-switch {
     position: absolute;
-    top: 15px;
+    top: /*15px*/18px;
     left: 10px;
     right: 10px;
     z-index: 9;

@@ -14,9 +14,9 @@ Author: Valérian Saliou
     background-color: /*#f4f4f4*/white;
     position: absolute;
     top: /*40px*/84px;
-    bottom: 6px;
-    right: 6px;
-    left: 6px;
+    bottom: /*6px*/0;
+    right: /*6px*/0;
+    left: /*6px*/0;
     z-index: 8;
     -moz-border-radius: /*3px*/2px;
     -webkit-border-radius: /*3px*/2px;
@@ -24,8 +24,6 @@ Author: Valérian Saliou
 	/*NEW*/
 	color: #464646;
 	padding: 13px;
-	border-bottom: 2px solid #D2D2D2;
-	border-left: 2px solid #D2D2D2;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
 }
 
@@ -149,6 +147,8 @@ html[dir="rtl"] #page-engine div.bc-pep a {
     /*-moz-box-shadow: inset 0 3px 10px #e8e8e8;
     -webkit-box-shadow: inset 0 3px 10px #e8e8e8;
     box-shadow: inset 0 3px 10px #e8e8e8;*/
+	/*NEW*/
+	overflow: auto;
 }
 
 #page-engine .content {
@@ -962,7 +962,7 @@ body.in_muji_call #page-engine .text .tools-jingle-audio {
 	float: left;
 	top: 20px;
 	width: 80%;
-	height: 115px;
+	height: 144px;
 }
 
 html[dir="rtl"] #page-engine .text .compose {

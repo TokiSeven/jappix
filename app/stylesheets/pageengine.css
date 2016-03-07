@@ -23,8 +23,9 @@ Author: Valérian Saliou
     border-radius: /*3px*/2px;
 	/*NEW*/
 	color: #464646;
-	padding: 13px;
+	/*padding: 13px;*/
 	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+	top: 0;
 }
 
 #page-engine .top {
@@ -47,14 +48,21 @@ Author: Valérian Saliou
     -webkit-border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;*/
+	/*NEW*/
+	margin: 16px 20px 0 20px;
+	padding-bottom: 18px;
 }
 
 #page-engine .top .avatar-container {
     text-align: center;
-    margin: 2px 0 0 10px;
+    /*margin: 2px 0 0 10px;
     height: 76px;
-    width: 76px;
+    width: 76px;*/
     float: left;
+	/*NEW*/
+	width: 50px;
+	height: 50px;
+	margin-right: 14px;
 }
 
 html[dir="rtl"] #page-engine .top .avatar-container {
@@ -66,29 +74,45 @@ html[dir="rtl"] #page-engine .top .avatar-container {
 #page-engine .top .avatar {
     max-height: 76px;
     max-width: 76px;
+	/*NEW*/
+	width: 50px;
+	height: 50px;
 }
 
 #page-engine .top .name {
-    text-align: right;
+    text-align: /*right*/left;
     padding: 7px;
 }
 
 html[dir="rtl"] #page-engine .top .name {
     text-align: left;
+	/*NEW*/
+	font: 14px;
+	color: #464646;
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 350px;
 }
 
 #page-engine p.bc-name {
-    font-size: 2.3em;
-    margin-bottom: 5px;
+    /*font-size: 2.3em;
+    margin-bottom: 5px;*/
 }
 
 #page-engine p.bc-infos {
-    font-size: 0.85em;
+    /*font-size: 0.85em;
     height: 16px;
     overflow: hidden;
     position: absolute;
     left: 115px;
-    right: 12px;
+    right: 12px;*/
+	/*NEW*/
+	display: block;
+	margin-top: 8px;
+	color: #7b1fa2;
 }
 
 html[dir="rtl"] #page-engine p.bc-infos {

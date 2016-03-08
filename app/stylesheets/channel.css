@@ -236,7 +236,7 @@ html[dir="rtl"] #channel .one-update .avatar-container {
 
 #channel .one-update div.body {
     line-height: 1.4;
-    margin-left: 65px;
+    //margin-left: 65px;
     opacity: 0.8;
 }
 
@@ -644,3 +644,196 @@ html[dir="rtl"] #channel .footer div {
     background-position: 0 -830px;
     display: none;
 }
+
+/*stepanovdmit.start*/
+@font-face{
+    font-family: 'Roboto';
+    src: url(../fonts/roboto/Roboto-Regular.ttf), url(../fonts/roboto/Roboto-Regular.woff);
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url(../fonts/roboto/Roboto-Medium.ttf), url(../fonts/roboto/Roboto-Medium.woff);
+    font-weight: 500;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url(../fonts/roboto/Roboto-Bold.ttf), url(../fonts/roboto/Roboto-Bold.woff);
+    font-weight: 700;
+}
+
+#channel .one-update{
+    border-bottom:none;
+}
+
+#channel .one-update div.body{
+    min-height:50px;
+    position: relative;
+    opacity:1.0;
+    font: 16px 'Roboto';
+    font-weight:normal;
+}
+
+#channel .one-update:nth-child(odd) div.body{
+
+    color: #464646;
+    background: #F9F9F9;
+    text-shadow: none;
+    padding: 13px;
+    border-bottom: 2px solid #D2D2D2;
+    border-left: 2px solid #D2D2D2;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+    border-radius: 2px;
+
+    margin-left:30px;
+    margin-right:300px;
+
+
+}
+
+#channel .one-update:nth-child(odd) div.body:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 19px;
+    left: -12px;
+    top: 0;
+    background: url(../images/img.png) 0 0 no-repeat;
+}
+
+#channel .one-update:nth-child(even) div.body{
+    background: #9019A7;
+    color: #fff;
+    text-shadow: none;
+    border-radius: 2px;
+    padding:13px;
+    margin-left:200px;
+    margin-right:150px;
+}
+
+#channel .one-update:nth-child(even):after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    right: 150px;
+    top: 6px;
+    background: url(../images/img3.png) 0 0 no-repeat;
+}
+
+#channel .one-update p.infos{
+
+
+    position:absolute;
+    top:10px;
+    right:0;
+
+    font: 12px 'Roboto';
+    font-weight:normal;
+    color:#464646;
+}
+
+#channel .top div.update {
+    position: absolute;
+    left: 115px;
+    right: 15px;
+    bottom: 0px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+
+
+#channel{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:auto;
+
+}
+
+#channel .footer {
+    background-color: #fff;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    top:auto;
+    height:115px;
+    border-top: 1px solid #E2E2E2;
+
+}
+
+
+#channel .footer .block_form{ padding: 0 20px;}
+#channel .footer .block_form textarea{
+    font: 12px 'Roboto';
+    color: #000;
+    border: none;
+    //border-top: 1px solid #E2E2E2;
+    width: 100%;
+    height: 115px;
+    padding: 14px 190px 14px 0;
+    resize: none;
+
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+#channel .footer .block_form .file{
+    width: 20px;
+    height: 22px;
+    margin: 27px 0 0 -180px;
+    background: url(../images/file.png) 0 0 no-repeat;
+    background-size: auto 44px;
+}
+
+
+#channel .footer .block_form .smile{
+    width: 20px;
+    height: 20px;
+    margin: 28px 0 0 -130px;
+    background: url(../images/smile.png) 0 0 no-repeat;
+    background-size: auto 40px;
+}
+
+#channel .footer .block_form .send{
+    width: 58px;
+    height: 57px;
+    background: url(../images/send.png) 0 0 no-repeat;
+    background-size: 100%;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 8px 0 0 -80px;
+}
+
+.left{
+    float:left;
+}
+
+textarea, textarea:active, textarea:focus{
+    outline: none transparent!important;
+    box-shadow: none;
+    -moz-outline: none!important;
+}
+
+#channel .content.mixed{
+    margin-bottom:100px;
+}
+
+#channel .content.individual{
+    margin-bottom:100px;
+}
+
+#channel .footer .block_form .file:hover{ background-position: 0 -22px;}
+#channel .footer .block_form .smile:hover{ background-position: 0 -20px;}
+#channel .footer .block_form .send:hover{ box-shadow: 0 5px 5px rgba(0,0,0,.30)}
+
+/*stepanovdmit.stop*/
+

@@ -276,7 +276,7 @@ var Talk = (function () {
                                             '<textarea name="microblog_body" placeholder="Введите сообщение" class="left focusable"></textarea>'+
                                             '<a href="/" class="file left"></a>'+
                                             '<a href="/" class="smile left"></a>'+
-                                            '<input type="submit" class="send left" value="">'+
+                                            '<input type="button" class="send left" value="">'+
                                         '</form>'+
                                     '</div>'+
 

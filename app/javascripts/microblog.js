@@ -1523,13 +1523,15 @@ var Microblog = (function () {
 
         try {
             // Get the values
-            var selector = $('#channel .top input[name="microblog_body"]');
+            //var selector = $('#channel .top input[name="microblog_body"]');
+            var selector = $('textarea');
             var body = $.trim(selector.val());
 
+            selector.val("");
             // Sufficient parameters
             if(body) {
                 // Disable & blur our input
-                selector.attr('disabled', true).blur();
+                //selector.attr('disabled', true).blur();
 
                 // Files array
                 var fName = [];
@@ -1939,14 +1941,20 @@ var Microblog = (function () {
     self.instance = function() {
 
         try {
-            var microblog_body_sel = $('#channel .top input[name="microblog_body"]');
+            //var microblog_body_sel = $('#channel .top input[name="microblog_body"]');
+            var microblog_body_sel = $('textarea');
 
             // Keyboard event
             microblog_body_sel.keyup(function(e) {
                 // Enter pressed: send the microblog notice
-                if((e.keyCode == 13) && !Common.exists('#attach .wait')) {
+                //if((e.keyCode == 13) && !Common.exists('#attach .wait')) {
+                if((e.ctrlKey && e.keyCode == 13) && !Common.exists('#attach .wait')) {
                     return self.send();
                 }
+            });
+
+            $("#channel .block_form input").on('click',function(){
+                self.send();
             });
 
             // Placeholder

@@ -663,6 +663,7 @@ html[dir="rtl"] #channel .footer div {
 
 #channel .one-update{
     border-bottom:none;
+    margin-bottom:0px;
 }
 
 #channel .one-update div.body{

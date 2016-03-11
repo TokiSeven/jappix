@@ -160,6 +160,15 @@ var Roster = (function () {
                 } else {
                     this_sel.show();
                 }
+				
+				//>>>>><<<<<>>>>><<<<<NEW HERE START>>>>><<<<<>>>>><<<<<
+				$('#roster .one-group:has(a:contains("Транспорты"))').remove();
+				if (!$('#roster .foot p')[0])
+					$('#roster .foot').prepend('<p>Контакты</p>');
+				$('.roster-muji').hide();
+				$('.tools .inbox-hidable').hide();
+				$('.tools .options-hidable').hide();
+				//>>>>><<<<<>>>>><<<<<NEW HERE FINISH>>>>><<<<<>>>>><<<<<
             });
         } catch(e) {
             Console.error('Roster.updateGroups', e);
@@ -182,6 +191,10 @@ var Roster = (function () {
     self.display = function(dXID, dXIDHash, dName, dSubscription, dGroup, dMode) {
 
         try {
+			//>>>>><<<<<>>>>><<<<<>>>>><<<<<NEW START HERE>>>>><<<<<>>>>><<<<<>>>>><<<<<
+			$('#roster .content').insertAfter($('#roster .filter'));
+			$('#roster .foot').insertBefore($('#roster .filter'));
+			//>>>>><<<<<>>>>><<<<<>>>>><<<<<NEW END HERE>>>>><<<<<>>>>><<<<<>>>>><<<<<
             // First remove the buddy
             $('#roster .' + dXIDHash).remove();
 

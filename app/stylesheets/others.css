@@ -161,7 +161,7 @@ html[dir="rtl"] .general-wait-content {
 
 #suggest .title {
     color: white;
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-transform: uppercase;
     text-shadow: 0 2px 2px black;
     position: absolute;
@@ -226,7 +226,7 @@ html[dir="rtl"] .general-wait-content {
 }
 
 #suggest .content a.one span.name {
-    font-weight: bold;
+    /*font-weight: bold;*/
     height: 16px;
     width: 250px;
     overflow: hidden;

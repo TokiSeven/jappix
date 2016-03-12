@@ -132,6 +132,8 @@ html[dir="rtl"] #top-content .tools-all {
 
 #top-content .notifications {
     background-position: 7px -1264px;
+	/*NEW*/
+	display: none;
 }
 
 #top-content .music {

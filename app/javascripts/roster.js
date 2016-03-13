@@ -192,8 +192,10 @@ var Roster = (function () {
 
         try {
 			//>>>>><<<<<>>>>><<<<<>>>>><<<<<NEW START HERE>>>>><<<<<>>>>><<<<<>>>>><<<<<
+			Interface.showAllBuddies('roster');
 			$('#roster .content').insertAfter($('#roster .filter'));
 			$('#roster .foot').insertBefore($('#roster .filter'));
+			$('#roster .filter input').attr('placeholder', 'Поиск');
 			//>>>>><<<<<>>>>><<<<<>>>>><<<<<NEW END HERE>>>>><<<<<>>>>><<<<<>>>>><<<<<
             // First remove the buddy
             $('#roster .' + dXIDHash).remove();

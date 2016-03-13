@@ -61,7 +61,7 @@ Author: Valérian Saliou
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;*/
 		/*NEW*/
-		overflow: auto;
+		margin-top: 18px;
 }
 
 #roster .one-group {
@@ -120,24 +120,29 @@ html[dir="rtl"] #roster .one-group a.group {
 }
 
 #roster .buddy {
-        width: 100%;
-        height: 50px;
+        /*width: 100%;
+        height: *//*50px*//*58px;
         margin-bottom: 4px;
-        clear: both;
+        clear: both;*/
+	/*NEW*/
+	width: 100%;
+	height: 58px;
+	clear: both;
 }
 
 #roster .buddy-click {
         background: #f9f9f9/*#d9e7ea*/;
-        /*width: 100%;
-        height: 100%;
+        width: 100%;
+        /*height: 100%;
         overflow: hidden;
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
         border-radius: 3px;*/
-		/*HERE NEW STYLE*/
-		transition: all .3s ease;
-		display: block;
-		padding: 9px 0;
+	/*HERE NEW STYLE*/
+	display: block;
+	padding: 9px 0;
+	height: 40px;
+	transition: all .3s ease;
 }
 
 #roster .buddy-click:hover,
@@ -166,11 +171,18 @@ html[dir="rtl"] #roster .one-group a.group {
 }
 
 #roster .avatar-container {
-        float: left;
+        /*float: left;
         text-align: center;
         margin: 3px;
         width: 46px;
-        height: 46px;
+        height: 46px;*/
+	/*NEW*/
+	float: left;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	z-index: 2;
+	margin: 0 16px 0 18px;
 }
 
 html[dir="rtl"] #roster .avatar-container {
@@ -178,12 +190,27 @@ html[dir="rtl"] #roster .avatar-container {
 }
 
 #roster .avatar {
-        max-width: 44px;
-        max-height: 44px;
+        /*max-width: 44px;
+        max-height: 44px;*/
+	/*NEW*/
+	max-width: 100%;
+	max-height: 100%;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
 }
 
 #roster .name {
-        margin: 4px 3px 5px 56px;
+        /*margin: 4px 3px 5px 56px;*/
+	/*NEW*/
+	float: left;
+	font: 500 14px 'Roboto';
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
 }
 
 html[dir="rtl"] #roster .name {
@@ -192,16 +219,21 @@ html[dir="rtl"] #roster .name {
 }
 
 #roster .buddy-name {
-        height: 17px;
+        /*height: 17px;
         font-weight: bold;
         font-size: 0.85em;
         color: #264249;
         margin: 5px 0 5px 2px;
-        overflow: hidden;
+        overflow: hidden;*/
+	/*NEW*/
+	padding: 0 71px 0 74px;
+	margin: 4px -71px 0 -74px;
+	font-size: 12px;
+	text-decoration: none;
 }
 
 #roster .buddy.blocked p.buddy-name {
-        text-decoration: line-through;
+        /*text-decoration: line-through;*/
 }
 
 #roster .buddy-presence {
@@ -720,7 +752,9 @@ html[dir="rtl"] #buddy-conf-join ul {
 #roster .roster-muji,
 #roster .roster-more,
 #roster .muji-hidable,
-#roster .muji
+#roster .muji,
+#roster .content .group,
+#roster .group-buddies .buddy-presence
 {
 	display: none;
 }
@@ -742,4 +776,18 @@ html[dir="rtl"] #buddy-conf-join ul {
 {
 	float: left;
 }
+#roster .group-buddies .buddy
+{
+	color: #464646;
+}
+#roster .group-buddies .hidden-buddy
+{
+	color: #B3B3B3;
+}
+#roster .content .group-buddies
+{
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+
 /*NEW FINISH*/

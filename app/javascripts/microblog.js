@@ -214,7 +214,7 @@ var Microblog = (function () {
                             /*'<div class="' + hash + '">' +
                                 '<div class="avatar-container">' +
                                     '<img class="avatar" src="' + './images/others/default-avatar.png' + '" alt="" />' +
-                                '</div>' +
+       d                         '</div>' +
                             '</div>' +*/
                         '<p class="infos">' + tTime + tGeoloc + '</p>'+
                             '<div class="body">' +

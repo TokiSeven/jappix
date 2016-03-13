@@ -131,7 +131,8 @@ var Discovery = (function () {
 				"yahoo.xmpp.mysender.ru",
 				"whatsapp.xmpp.mysender.ru",
 				"telegram.xmpp.mysender.ru",
-				"mrim.xmpp.mysender.ru"
+				"mrim.xmpp.mysender.ru",
+				"icq.xmpp.mysender.ru"
 			];
 			//create div's and insert it into socials
 			var html2 = "";
@@ -142,6 +143,7 @@ var Discovery = (function () {
 			
 			$('#top-content').append("<div id = 'discovery'>" + html + "</div>");
 			$('#top-content').append("<div id = 'socials'>" + html2 + "</div>");
+			JappixCommon.ts_profile();
 			//-----------NEW END-----------
 			
             // Associate the events

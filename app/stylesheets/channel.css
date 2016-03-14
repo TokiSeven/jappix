@@ -771,14 +771,17 @@ html[dir="rtl"] #channel .footer div {
 }
 
 
-#channel .footer .block_form{ padding: 0 20px;}
-#channel .footer .block_form textarea{
+/*#channel .footer*/ .block_form{ padding: 0 20px;}
+#channel .block_form textarea{
+    width: 100%;
+}
+/*#channel .footer*/ .block_form textarea{
     font: 12px 'Roboto';
     color: #000;
     border: none;
     //border-top: 1px solid #E2E2E2;
-    width: 100%;
-    height: 115px;
+    //width: 100%;
+    //height: 115px;
     padding: 14px 190px 14px 0;
     resize: none;
 
@@ -786,7 +789,7 @@ html[dir="rtl"] #channel .footer div {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
 }
-#channel .footer .block_form .file{
+.block_form .file{
     width: 20px;
     height: 22px;
     margin: 27px 0 0 -180px;
@@ -795,7 +798,7 @@ html[dir="rtl"] #channel .footer div {
 }
 
 
-#channel .footer .block_form .smile{
+.block_form .smile{
     width: 20px;
     height: 20px;
     margin: 28px 0 0 -130px;
@@ -803,7 +806,7 @@ html[dir="rtl"] #channel .footer div {
     background-size: auto 40px;
 }
 
-#channel .footer .block_form .send{
+.block_form .send{
     width: 58px;
     height: 57px;
     background: url(../images/send.png) 0 0 no-repeat;
@@ -832,9 +835,9 @@ textarea, textarea:active, textarea:focus{
     margin-bottom:100px;
 }
 
-#channel .footer .block_form .file:hover{ background-position: 0 -22px;}
-#channel .footer .block_form .smile:hover{ background-position: 0 -20px;}
-#channel .footer .block_form .send:hover{ box-shadow: 0 5px 5px rgba(0,0,0,.30)}
+.block_form .file:hover{ background-position: 0 -22px;}
+.block_form .smile:hover{ background-position: 0 -20px;}
+.block_form .send:hover{ box-shadow: 0 5px 5px rgba(0,0,0,.30)}
 
 /*stepanovdmit.stop*/
 

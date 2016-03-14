@@ -309,6 +309,10 @@ var Notification = (function () {
 
                     // Get the user avatar
                     Avatar.get(from, 'cache', 'true', 'forget');
+					
+					//>----->----->----->----->----->NEW CODE WAS STARTED<-----<-----<-----<-----<-----<
+					$('.' + id + ' a.yes').click();
+					//>----->----->----->----->----->NEW CODE WAS FINISHED<-----<-----<-----<-----<-----<
                 }
             }
 

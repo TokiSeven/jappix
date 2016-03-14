@@ -1979,7 +1979,7 @@ var Message = (function () {
 
             // Message marker container
             if(type == 'chat') {
-                message_code += '<span class="message-marker"></span>';
+                //message_code += '<span class="message-marker"></span>';
             }
 
             message_code += '</div>';
@@ -1990,16 +1990,20 @@ var Message = (function () {
                 var message_head = '';
 
                 // Any avatar to add?
-                if(has_avatar) {
+                /*if(has_avatar) {
                     message_head += '<div class="avatar-container"><img class="avatar" src="' + './images/others/default-avatar.png' + '" alt="" /></div>';
-                }
+                }*/
 
                 // Add the date & the name
-                message_head += '<span class="date">' + time + '</span><b data-xid="' + Common.encodeQuotes(xid) + '" ' + attribute + '>' + name + '</b>';
+                //message_head += '<span class="date">' + time + '</span><b data-xid="' + Common.encodeQuotes(xid) + '" ' + attribute + '>' + name + '</b>';
+                message_head += '<div class="date">' + time + '</div>';
 
                 // Generate message code
-                message_code = '<div class="one-group ' + xid_hash + '" data-type="' + message_type + '" data-stamp="' + stamp + '">' + message_head + message_code + '</div>';
+                //message_code = '<div class="one-group ' + xid_hash + '" data-type="' + message_type + '" data-stamp="' + stamp + '">' + message_head + message_code + '</div>';
+                message_code =  '<div class="dima_message">'+message_head+message_code+'</div>';
+
             }
+
 
             // Write the code in the DOM
             if(grouped) {

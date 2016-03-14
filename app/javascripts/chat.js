@@ -418,7 +418,7 @@ var Chat = (function () {
                     chat_args.code +
 
                     '<div class="text">' +
-                        '<div class="footer">' +
+                        /*'<div class="footer">' +
                             '<div class="chat-tools-content chat-tools-smileys">' +
                                 '<a href="#" class="tools-smileys tools-tooltip talk-images"></a>' +
                             '</div>' +
@@ -436,10 +436,20 @@ var Chat = (function () {
                             '<a href="#" class="tools-clear tools-tooltip talk-images chat-tools-content" title="' + Common._e("Clean current chat") + '"></a>' +
 
                             chat_args.link +
-                        '</div>' +
+                        '</div>' +*/
 
                         '<div class="compose">' +
-                            '<textarea class="message-area focusable" ' + chat_args.disabled + ' data-to="' + escaped_xid + '" /></textarea>' +
+                            //'<textarea class="message-area focusable" ' + chat_args.disabled + ' data-to="' + escaped_xid + '" /></textarea>' +
+                            '<div class="block_form">'+
+                                '<form>'+
+                                    //'<textarea name="microblog_body" placeholder="Введите сообщение" class="left focusable message-area"></textarea>'+
+                                    '<textarea name = "microblog_body" placeholder="Введите сообщение" class="left message-area focusable" ' + chat_args.disabled + ' data-to="' + escaped_xid + '" /></textarea>' +
+                                    '<a href="/" class="file left"></a>'+
+                                    '<a href="/" class="smile left"></a>'+
+                                    '<input type="button" class="send left" value="">'+
+                                '</form>'+
+                            '</div>'+
+
                         '</div>' +
                     '</div>' +
                 '</div>'
@@ -652,6 +662,8 @@ var Chat = (function () {
 
             // The event handlers
             var input_sel = $('#page-engine #' + hash + ' .message-area');
+            //self._createEvents(input_sel, xid, hash);
+            input_sel = $('.compose textarea');
             self._createEvents(input_sel, xid, hash);
 
             // Input events

@@ -56,7 +56,7 @@ if(!defined('JAPPIX_BASE')) {
         echo "\n";
     } ?>
 
-    <link rel="stylesheet" href="app/stylesheets/mysender.css">
+    <!--link rel="stylesheet" href="app/stylesheets/mysender.css"-->
 </head>
 
 <body class="body-images1">

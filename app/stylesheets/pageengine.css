@@ -1271,6 +1271,7 @@ html[dir="rtl"] #page-engine .tooltip select {
 #page-engine .dima_message .message-content{
     font: 16px 'Roboto';
     font-weight:normal;
+    margin-right:0;
 }
 
 #page-engine .dima_message .one-line[data-mode='him']{

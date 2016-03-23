@@ -96,7 +96,7 @@ if(!anonymousMode() && !httpAuthEnabled()) { ?>
         
         var login = document.querySelector('#login').value;
         var pwd = document.querySelector("#pwd").value;
-        var server = "jappix.com";
+        var server = "xmpp.mysender.ru";
 
         var dog = login.indexOf('@');
         if (dog!=-1){

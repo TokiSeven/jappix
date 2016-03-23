@@ -41,6 +41,7 @@ Author: Valérian Saliou
 		position: relative;
 		table-layout: fixed;
 		min-height: 500px;
+                border-right: 1px  solid rgb(226, 226, 226);
 }
 
 #roster .content {

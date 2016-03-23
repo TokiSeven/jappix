@@ -751,3 +751,12 @@ html[dir="rtl"] .call-content .call-notify .notification-content .reply-buttons 
 	font: 500 14px 'Roboto';
 }
 /*NEW FINISH*/
+
+
+#top-content{
+    height:100px;
+}
+
+#profile {
+    height:100px;
+}

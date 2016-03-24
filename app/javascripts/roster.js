@@ -1000,7 +1000,7 @@ var Roster = (function () {
             }
 
             // Apply the new height
-            $('#roster .content').css('height', new_height);
+            //$('#roster .content').css('height', new_height);
         } catch(e) {
             Console.error('Roster.adapt', e);
         }

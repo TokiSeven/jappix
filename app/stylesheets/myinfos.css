@@ -11,7 +11,7 @@ Author: Valérian Saliou
 */
 
 #my-infos {
-    background-color: rgb(20,20,20);
+    /*background-color: rgb(20,20,20);
     background-color: rgba(20,20,20,0.85);
     color: #919191;
     margin-top: 8px;
@@ -21,7 +21,9 @@ Author: Valérian Saliou
     border-radius: 4px;
     -moz-box-shadow: 0 0 6px #5c5c5c;
     -webkit-box-shadow: 0 0 6px #5c5c5c;
-    box-shadow: 0 0 6px #5c5c5c;
+    box-shadow: 0 0 6px #5c5c5c;*/
+	/*NEW*/
+	display: none;
 }
 
 #my-infos .content {

@@ -11,11 +11,15 @@ Author: Valérian Saliou
 */
 
 #discovery .content {
-    padding: 10px 0 10px 0;
+    /*padding: 10px 0 10px 0;*/
+	/*NEW*/
+	position: absolute;
+	top: 30px;
+	bottom: 30px;
 }
 
 #discovery .content p {
-    margin: 5px 10px 5px 10px;
+    /*margin: 5px 10px 5px 10px;*/
     text-align: justify;
     font-size: 0.85em;
 }
@@ -26,8 +30,8 @@ Author: Valérian Saliou
 #privacy .privacy-head {
     width: 606px;
     height: 24px;
-    margin: 0 10px 10px 10px;
-    padding: 6px;
+    /*margin: 0 10px 10px 10px;*/
+    /*padding: 6px;*/
     background: #f1f6fd;
     border: 1px #9dc4fc solid;
 }
@@ -36,7 +40,7 @@ Author: Valérian Saliou
 #directory .directory-server-text {
     float: left;
     font-size: 0.9em;
-    margin: 3px;
+    /*margin: 3px;*/
 }
 
 html[dir="rtl"] #discovery .disco-server-text,
@@ -50,7 +54,7 @@ html[dir="rtl"] #directory .directory-server-text {
     height: 18px;
     float: right;
     margin-right: 10px;
-    padding: 2px;
+    /*padding: 2px;*/
 }
 
 html[dir="rtl"] #discovery .disco-server-input,
@@ -62,7 +66,8 @@ html[dir="rtl"] #directory .directory-server-input {
 
 #discovery .disco-category {
     display: none;
-    margin-bottom: 22px;
+    margin-left: 20px;/*margin-bottom: 22px;*/
+	float:left;
 }
 
 #discovery .disco-category-title {
@@ -76,3 +81,62 @@ html[dir="rtl"] #directory .directory-server-input {
 html[dir="rtl"] #discovery .one-actions .one-button {
     float: left;
 }
+
+/*hide .top and .bottom*/
+#discovery .content .discovery-head, #discovery .disco-category-title {
+	position: absolute;
+	left: -9999px;
+}
+
+/*----------NEW START----------*/
+#discovery .results
+{
+	background: #fff;
+	padding: 15px;
+	position: absolute;
+	top: 40px;
+	left: 24px;
+	z-index: 999;
+	border-radius: 4px;
+	box-shadow: 4px 6px 30px rgba(0,0,0,.50);
+	display: none;
+	text-align: left;
+}
+#discovery .content .results .disco-category .oneresult
+{
+	float: left;
+	margin-left: 4px;
+	width: 60px;
+	height: 40px;
+	display:none;
+}
+#discovery .content .results .disco-category .oneresult .one-icon img
+{
+	width: 40px;
+	height: 40px;
+}
+#discovery .content .results .disco-category .oneresult .one-host,
+#discovery .content .results .disco-category .oneresult .one-type
+{
+	display: none;
+}
+#socials
+{
+	position: absolute;
+	top: 30px;
+	bottom: 30px;
+	left: 20px;
+}
+#socials .social
+{
+	float: left;
+	margin-right: 20px;
+	width: 40px;
+	height: 40px;
+}
+#socials .social img
+{
+	width: 40px;
+	height: 40px;
+}
+/*----------NEW END----------*/

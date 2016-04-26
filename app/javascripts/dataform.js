@@ -1125,6 +1125,20 @@ var DataForm = (function () {
                         '<div class="one-actions">' + tools + '</div>' +
                     '</div>'
                 );
+				
+				//-------------------------NEW IS HERE STARTING-------------------------
+				var pngName;
+				var myObj = $('.' + hash + ' .one-icon');
+				pngName = './server/get.php?h=0b1545052ca60753f7976c853e349cee&t=images&f=discovery/' + from + '.png';
+				myObj.append(
+					'<img src = "' + pngName + '">'
+				);
+				//click event MINE
+				myObj.click(function(){
+					var str = $('.' + hash + ' .one-host').text();
+					DataForm.go(str, 'subscribe', '', '', 'discovery');
+				});
+				//-------------------------NEW IS HERE ENDING-------------------------
 
                 // We display the category
                 $(pathID + ' .disco-' + category).show();

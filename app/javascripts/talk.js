@@ -35,6 +35,10 @@ var Talk = (function () {
             PEP.instance();
             Notification.instance();
             Music.instance();
+			/*---------------------NEW START---------------------*/
+			Discovery.open();
+			$('.tools-logo').remove();
+			/*---------------------NEW END---------------------*/
         } catch(e) {
             Console.error('Talk.events', e);
         }
@@ -235,7 +239,7 @@ var Talk = (function () {
                                         '<img class="avatar" src="' + './images/others/default-avatar.png' + '" alt="" />' +
                                     '</div>' +
 
-                                    '<div class="update">' +
+                                    /*'<div class="update">' +
                                         '<p>' + Common._e("What\'s up with you?") +  '</p>' +
 
                                         '<div class="microblog-body">' +
@@ -254,17 +258,28 @@ var Talk = (function () {
                                                 '</div>' +
                                             '</form>' +
                                         '</div>' +
-                                    '</div>' +
+                                    '</div>' +*/
                                 '</div>' +
 
                                 '<div class="content mixed"></div>' +
 
                                 '<div class="footer">' +
-                                    '<div class="sync talk-images">' + Common._e("You are synchronized with your network.") +  '</div>' +
+                                    /*'<div class="sync talk-images">' + Common._e("You are synchronized with your network.") +  '</div>' +
 
                                     '<div class="unsync talk-images">' + Common._e("Cannot send anything: you can only receive notices!") +  '</div>' +
 
-                                    '<div class="fetch wait-small">' + Common._e("Fetching the social channel...") +  '</div>' +
+                                    '<div class="fetch wait-small">' + Common._e("Fetching the social channel...") +  '</div>' +*/
+
+
+                                    '<div class="block_form">'+
+                                        '<form>'+
+                                            '<textarea name="microblog_body" placeholder="Введите сообщение" class="left focusable"></textarea>'+
+                                            '<a href="/" class="file left"></a>'+
+                                            '<a href="/" class="smile left"></a>'+
+                                            '<input type="button" class="send left" value="">'+
+                                        '</form>'+
+                                    '</div>'+
+
                                 '</div>' +
                             '</div>';
 

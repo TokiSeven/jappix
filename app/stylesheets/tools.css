@@ -11,8 +11,8 @@ Author: Valérian Saliou
 */
 
 #top-content .tools {
-    background-color: rgb(232,241,243);
-    background-color: rgba(232,241,243,0.6);
+    /*background-color: rgb(232,241,243);
+    background-color: rgba(232,241,243,0.6);*/
     padding: 3px 8px 5px 8px;
     min-width: 10px;
     height: 17px;
@@ -132,10 +132,14 @@ html[dir="rtl"] #top-content .tools-all {
 
 #top-content .notifications {
     background-position: 7px -1264px;
+	/*NEW*/
+	display: none;
 }
 
 #top-content .music {
     background-position: 6px -1286px;
+	/*NEW*/
+	display: none;
 }
 
 #top-content .notifications:hover,
@@ -733,4 +737,26 @@ html[dir="rtl"] .call-content .call-notify .notification-content .reply-buttons 
         background-color: rgb(232,241,243);
         background-color: rgba(232,241,243,0.6);
     }
+}
+
+/*NEW BEGIN*/
+.tools .options-hidable,
+.tools .vcard,
+.tools .inbox-hidable
+{
+	display: none;
+}
+.tools .quit
+{
+	font: 500 14px 'Roboto';
+}
+/*NEW FINISH*/
+
+
+#top-content{
+    height:100px;
+}
+
+#profile {
+    height:100px;
 }

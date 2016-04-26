@@ -11,13 +11,13 @@ Author: Valérian Saliou
 */
 
 #home {
-    position: absolute;
+/*    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     min-height: 550px;
-    min-width: 875px;
+    min-width: 875px;*/
 }
 
 #home .corporation,
@@ -854,8 +854,8 @@ html[dir="rtl"] #home label {
 
 #home input,
 #home select {
-    float: left;
-    margin-bottom: 5px;
+    /*float: left;
+    margin-bottom: 5px;*/
 }
 
 html[dir="rtl"] #home input,
@@ -866,8 +866,8 @@ html[dir="rtl"] #home select {
 #home input[type="text"],
 #home input[type="password"],
 #home select {
-    width: 140px;
-    margin-top: -2px;
+   /* width: 140px;
+    margin-top: -2px;*/
 }
 
 #home .submit {

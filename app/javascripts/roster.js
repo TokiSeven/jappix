@@ -160,6 +160,15 @@ var Roster = (function () {
                 } else {
                     this_sel.show();
                 }
+				
+				//>>>>><<<<<>>>>><<<<<NEW HERE START>>>>><<<<<>>>>><<<<<
+				$('#roster .one-group:has(a:contains("Транспорты"))').remove();
+				if (!$('#roster .foot p')[0])
+					$('#roster .foot').prepend('<p>Контакты</p>');
+				$('.roster-muji').hide();
+				$('.tools .inbox-hidable').hide();
+				$('.tools .options-hidable').hide();
+				//>>>>><<<<<>>>>><<<<<NEW HERE FINISH>>>>><<<<<>>>>><<<<<
             });
         } catch(e) {
             Console.error('Roster.updateGroups', e);
@@ -182,6 +191,12 @@ var Roster = (function () {
     self.display = function(dXID, dXIDHash, dName, dSubscription, dGroup, dMode) {
 
         try {
+			//>>>>><<<<<>>>>><<<<<>>>>><<<<<NEW START HERE>>>>><<<<<>>>>><<<<<>>>>><<<<<
+			Interface.showAllBuddies('roster');
+			$('#roster .content').insertAfter($('#roster .filter'));
+			$('#roster .foot').insertBefore($('#roster .filter'));
+			$('#roster .filter input').attr('placeholder', 'Поиск');
+			//>>>>><<<<<>>>>><<<<<>>>>><<<<<NEW END HERE>>>>><<<<<>>>>><<<<<>>>>><<<<<
             // First remove the buddy
             $('#roster .' + dXIDHash).remove();
 
@@ -985,7 +1000,7 @@ var Roster = (function () {
             }
 
             // Apply the new height
-            $('#roster .content').css('height', new_height);
+            //$('#roster .content').css('height', new_height);
         } catch(e) {
             Console.error('Roster.adapt', e);
         }
@@ -1456,9 +1471,9 @@ var Roster = (function () {
                                 '- <a href="#" class="buddy-conf-more-privacy">' + Common._e("Privacy") +  '</a>' +
                             '</p>' +
 
-                            '<p class="buddy-conf-text">' +
+                            /*'<p class="buddy-conf-text">' +
                                 '- <a href="#" class="buddy-conf-more-service-disco">' + Common._e("Service discovery") +  '</a>' +
-                            '</p>' +
+                            '</p>' +*/
 
                             '<p class="buddy-conf-text commands-hidable"">' +
                                 '- <a href="#" class="buddy-conf-more-commands">' + Common._e("Commands") +  '</a>' +

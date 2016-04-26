@@ -159,7 +159,7 @@ var Microblog = (function () {
                 var gLat = sGeoloc.find('lat').text();
                 var gLon = sGeoloc.find('lon').text();
 
-                if(gLat && gLon) {
+                /*if(gLat && gLon) {
                     tGeoloc += '<a class="geoloc talk-images" href="http://maps.google.com/?q=' + Common.encodeQuotes(gLat) + ',' + Common.encodeQuotes(gLon) + '" target="_blank">';
 
                     // Human-readable name?
@@ -176,7 +176,7 @@ var Microblog = (function () {
                     }
 
                     tGeoloc += '</a>';
-                }
+                }*/
 
                 // Entry content: HTML, parse!
                 if(this_sel.find('content[type="html"]').size()) {
@@ -211,12 +211,12 @@ var Microblog = (function () {
 
                     // Display the received message
                     var html = '<div class="one-update update_' + hash + ' ' + tHash + '" data-stamp="' + Common.encodeQuotes(tStamp) + '" data-id="' + Common.encodeQuotes(tID) + '" data-xid="' + Common.encodeQuotes(from) + '">' +
-                            '<div class="' + hash + '">' +
+                            /*'<div class="' + hash + '">' +
                                 '<div class="avatar-container">' +
                                     '<img class="avatar" src="' + './images/others/default-avatar.png' + '" alt="" />' +
-                                '</div>' +
-                            '</div>' +
-
+       d                         '</div>' +
+                            '</div>' +*/
+                        '<p class="infos">' + tTime + tGeoloc + '</p>'+
                             '<div class="body">' +
                                 '<p>';
 
@@ -224,8 +224,10 @@ var Microblog = (function () {
                     if(uRepeated)
                         html += '<a href="#" class="repeat talk-images" title="' + Common.encodeQuotes(Common.printf(Common._e("This is a repeat from %s"), uRepeat[0] + ' (' + uRepeat[1] + ')')) + '" onclick="return Chat.checkCreate(\'' + Utils.encodeOnclick(uRepeat[1]) + '\', \'chat\');" data-xid="' + Common.encodeQuotes(uRepeat[1]) + '"></a>';
 
-                    html += '<b title="' + from + '" class="name">' + tName.htmlEnc() + '</b> <span>' + tFiltered + '</span></p>' +
-                        '<p class="infos">' + tTime + tGeoloc + '</p>';
+                    /*html += '<b title="' + from + '" class="name">' + tName.htmlEnc() + '</b> <span>' + tFiltered + '</span></p>' +
+                        '<p class="infos">' + tTime + tGeoloc + '</p>';*/
+
+                    html += '<b title="' + from + '" class="name">' + tName.htmlEnc() + '</b> <span>' + tFiltered + '</span></p>';
 
                     // Any file to display?
                     if(tFURL.length)
@@ -303,7 +305,7 @@ var Microblog = (function () {
                         }
                     }
 
-                    html += '</div><div class="comments-container" data-node="' + Common.encodeQuotes(nodeComments) + '"></div></div>';
+                    /*html += '</div><div class="comments-container" data-node="' + Common.encodeQuotes(nodeComments) + '"></div></div>';*/
 
                     // Mixed mode
                     if((mode == 'mixed') && !Common.exists('.mixed .' + tHash)) {
@@ -1363,7 +1365,7 @@ var Microblog = (function () {
 
         try {
             // First hide all the infos elements
-            $('#channel .footer div').hide();
+            //$('#channel .footer div').hide();
 
             // Display the good one
             $('#channel .footer div.' + type).show();
@@ -1521,13 +1523,15 @@ var Microblog = (function () {
 
         try {
             // Get the values
-            var selector = $('#channel .top input[name="microblog_body"]');
+            //var selector = $('#channel .top input[name="microblog_body"]');
+            var selector = $('textarea');
             var body = $.trim(selector.val());
 
+            selector.val("");
             // Sufficient parameters
             if(body) {
                 // Disable & blur our input
-                selector.attr('disabled', true).blur();
+                //selector.attr('disabled', true).blur();
 
                 // Files array
                 var fName = [];
@@ -1937,14 +1941,20 @@ var Microblog = (function () {
     self.instance = function() {
 
         try {
-            var microblog_body_sel = $('#channel .top input[name="microblog_body"]');
+            //var microblog_body_sel = $('#channel .top input[name="microblog_body"]');
+            var microblog_body_sel = $('textarea');
 
             // Keyboard event
             microblog_body_sel.keyup(function(e) {
                 // Enter pressed: send the microblog notice
-                if((e.keyCode == 13) && !Common.exists('#attach .wait')) {
+                //if((e.keyCode == 13) && !Common.exists('#attach .wait')) {
+                if((e.ctrlKey && e.keyCode == 13) && !Common.exists('#attach .wait')) {
                     return self.send();
                 }
+            });
+
+            $("#channel .block_form input").on('click',function(){
+                self.send();
             });
 
             // Placeholder

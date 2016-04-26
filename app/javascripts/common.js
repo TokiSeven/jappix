@@ -30,6 +30,31 @@ var Common = (function () {
      * @param {string} path
      * @return {boolean}
      */
+	 //=================================================
+	 //--------------------NEW START--------------------
+	 //=================================================
+	 self.ts_getNick = function()
+	{
+		var num = JappixCommon.getXID().indexOf("@");
+		return JappixCommon.getXID().substring(0, num);
+	}
+	self.ts_profile = function()
+	{
+		var nick = self.ts_getNick();
+		var html =
+			"<div id = 'profile'>" +
+				"<div class = 'logo'>" +
+					"<img src = './server/get.php?h=0b1545052ca60753f7976c853e349cee&t=images&f=others/logo.png'>" +
+				"</div>" +
+				"<div class = 'name'>" +
+					nick +
+				"</div>" +
+			"</div>";
+		$("#left-content").prepend(html);
+	}
+	//=================================================
+	//---------------------NEW END---------------------
+	//=================================================
     self.exists = function(path) {
 
         var exists = false;
@@ -163,7 +188,7 @@ var Common = (function () {
                 // User XID
                 return xid + '@' + HOST_MAIN;
             }
-
+			
             // Nothing special (yet bare XID)
             return xid;
         } catch(e) {
@@ -429,7 +454,7 @@ var Common = (function () {
             if(xid.indexOf('@') !== -1) {
                 xid = self.nodeprep(self.getXIDNick(xid, true)) + '@' + self.getXIDHost(xid);
             }
-
+			
             return xid;
         } catch(e) {
             Console.error('Common.bareXID', e);

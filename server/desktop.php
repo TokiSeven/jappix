@@ -104,7 +104,7 @@ if(!anonymousMode() && !httpAuthEnabled()) { ?>
             login = login.substring(0,dog);
         }
 
-        Connection.doLogin(login,server,pwd);    
+        Connection.doLogin(login,server,pwd,"MySender");    
     });
 </script>
 
